@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>membership cards</title>
+  <link rel="stylesheet" href="css/croppie.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Iskaznica maker</h1>
+
+
+    <div class="row card-editor">
+      <div class="col-sm-4">
+        <h3>Edit</h3>
+        <div class="form-wrapper">
+          <form id="member" runat="server">
+            <label for="name" id="name_label">Ime i Prezime:</label><br>
+            <input type="text" id="name" name="name" value="Ivo Ivić" class="text-input" />
+            <br>
+            <label for="date" id="date_label">Datum rođenja:</label><br>
+            <input type="text" id="date" name="date" value="01.01.2000." class="text-input" />
+            <br>
+            <label for="number" id="number_label">Članski broj: </label><br>
+            <input type="number" id="number" name="number" value="123" class="text-input" />
+            <br>
+            <label for="status" id="status_label">Status: </label><br>
+            <input type="text" id="status" name="status" value="Član" class="text-input" />
+            <br>
+            <span class="upload-btn">
+              <label for="profile-img" id="profile-img_label">Slika: </label><br>
+              <input type="file" id="profile-img" name="profile-img" value="" class="text-input item-img" accept="image/*" />
+              <a href="#" id="clear" class="hide-x"><i class="fa fa-times"></i></a>
+            </span>
+            <br>
+          </form>
+        </div>
+      </div><!-- /.col-sm-4 -->
+      <div class="col-sm-8">
+        <h3 class="card-header-preview">Preview</h3>
+        <div class="card-container">
+          <div id="card" class="card-wrapper">
+            <div class="card-data">
+              <div class="profile-img">
+                <div id="image-field"> <img id="item-img-output" src="" alt="" /> </div>
+              </div>
+              <div class="data">
+                <span class="data-field-name">Ime i Prezime</span>
+                <div id="name-field" class="member-data"></div>
+                <span class="data-field-name" class="member-data">Datum rođenja</span>
+                <div id="date-field" class="member-data"></div>
+                <span class="data-field-name" class="member-data">Članski broj</span>
+                <div id="number-field" class="member-data"></div>
+                <span class="data-field-name" class="member-data">Status</span>
+                <div id="status-field" class="member-data"></div>
+              </div>
+            </div>
+          </div><!-- /.card-wrapper -->
+        </div><!-- /.card-container -->
+        <button id="preview" class="btn-create">Create</button>
+      </div><!-- /.col-sm-8 -->
+
+    </div><!-- /.row -->
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Download</h3>
+        <div class="img-output-wrapper">
+          <div id="img-output">
+            <a id="output-link" href="" download="">
+              <span class="output-overlay"><i class="fa fa-download"></i></span>
+              <img id="output-img" crossorigin="anonymous" src="">
+            </a>
+          </div>
+        </div>
+      </div><!-- /.col-sm-12 -->
+
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+
+
+  <!-- Modal -->
+  <div id="cropImagePop" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Crop Image</h4>
+        </div>
+        <div class="modal-body">
+          <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+            <div style="display: block; width: 300px; height: 300px;">
+              <div id="upload-demo"></div>
+              <button type="button" id="rotateLeft" data-rotate="-90"><i class="fa fa-repeat"></i></button>
+              <button type="button" id="rotateRight" data-rotate="90"><i class="fa fa-repeat"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" id="cropImageBtn" class="btn btn-primary">Crop</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/canvas2image@1.0.5/canvas2image.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.4/croppie.min.js'></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
