@@ -1,0 +1,148 @@
+.timeline {
+  .col-1 {
+    width: auto;
+    min-width: auto;
+    padding: 0 15px;
+  }
+  &__item-title {
+    position: relative;
+    margin: 0;
+  }
+
+  &__item {
+    &:first-child {
+      .timeline__item-title {
+        &:after {
+          content: "";
+          width: 30px;
+          height: 25px;
+          background-color: $white;
+          display: block;
+          position: absolute;
+          left: -60px;
+          top: 0px;
+        }
+      }
+    }
+    &:last-child {
+      .timeline__item-content {
+        border-left: 2px solid transparent;
+      }
+
+      .timeline__item-title:after {
+        content: "";
+        width: 2px;
+        height: 25px;
+        background-color: $primary;
+        display: block;
+        position: absolute;
+        left: -47px;
+        top: 0px;
+
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+
+      .timeline__item-description:after {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item-title {
+    &:before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border: 2px solid $primary;
+      background-color: $white;
+      display: block;
+      position: absolute;
+      border-radius: 50%;
+      left: -58px;
+      top: 5px;
+      z-index: 1;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__item-year {
+    font-size: 1.5rem;
+    color: $grey;
+  }
+
+  &__item-year:after {
+    content: ".";
+  }
+
+  &__item-year-wrapper {
+    margin-right: 30px;
+  }
+
+  &__item-content {
+    border-left: 2px solid $primary;
+    padding-left: 45px;
+    padding-bottom: 1rem;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+      border: none;
+      padding: 0;
+    }
+  }
+
+  &__item-link {
+    text-decoration: underline;
+  }
+
+  &__item-description {
+    color: $grey;
+
+    &::after {
+      @include media-breakpoint-down(sm) {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 60px;
+        background-color: $black;
+        margin: 1rem auto;
+      }
+    }
+  }
+}
+
+.dark {
+  .timeline {
+    &__item {
+      &:first-child {
+        .timeline__item-title {
+          &:after {
+            background-color: $black;
+          }
+        }
+      }
+    }
+    &__item-title {
+      &:before {
+        background-color: $black;
+      }
+    }
+
+    &__item-link {
+      color: $grey;
+    }
+
+    &__item-description {
+      color: $white;
+    }  
+  }
+}

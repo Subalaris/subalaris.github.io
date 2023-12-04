@@ -1,0 +1,19 @@
+.bullet-list {
+  padding-left: 20px;
+  text-align: left;
+
+  &__item {
+    color: $grey;
+    margin: 0.2rem 0;
+  }
+}
+
+.dark {
+  .bullet-list {
+  
+    &__item {
+      color: $light-grey;
+    }
+  }
+
+}

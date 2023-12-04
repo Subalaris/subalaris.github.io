@@ -1,0 +1,103 @@
+.icon-list {
+  flex-wrap: wrap;
+
+  .col-6 {
+    width: 100%;
+  }
+
+  @include media-breakpoint-between(855, lg) {
+    .col-6 {
+      width: 50%;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .col-6 {
+      width: 50%;
+    }
+  }
+
+  .col-4 {
+    width: 100%;
+
+    @include media-breakpoint-up(sm) {
+      width: 50%;
+    }
+
+    @include media-breakpoint-up(835) {
+      width: 33.33%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    margin: 10px 0;
+    flex-wrap: wrap;
+
+    flex-direction: column;
+    align-items: center;
+
+    @include media-breakpoint-up(sm) {
+      flex-direction: row;
+      margin: 0;
+    }
+  }
+
+  &__item-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+
+    @include media-breakpoint-between(sm, lg) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__icon-wrapper {
+    position: relative;
+    align-items: center;
+    width: 3.125rem;
+    height: 3.4375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/icons/hexagon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 1rem 0;
+
+    @include media-breakpoint-up(sm) {
+      margin-right: 10px;
+    }
+  }
+
+  &__icon {
+    max-width: 1.625rem;
+    width: 100%;
+    height: auto;
+  }
+
+  &--dark {
+    .icon-list__icon-wrapper  {
+    background-image: url(../images/icons/hexagon-dark.svg);
+    }
+  }
+}
+
+.dark {
+  .icon-list {
+    &__item-title {
+      color: $light-grey;
+    }
+    &__icon-wrapper {
+      filter: brightness(4);
+    }
+
+    &--dark {
+      .icon-list__icon-wrapper  {
+      background-image: url(../images/icons/hexagon.svg);
+      }
+    }
+  }
+
+}

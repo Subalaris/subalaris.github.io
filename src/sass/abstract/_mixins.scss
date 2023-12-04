@@ -1,0 +1,89 @@
+
+// breakpoints
+@mixin media-breakpoint-up($value) {
+  $breakpoint-name: null;
+  $breakpoint-value: null;
+
+  @each $breakpoint, $width in $breakpoints {
+    @if $value == $breakpoint {
+      $breakpoint-name: $breakpoint;
+      $breakpoint-value: $width;
+    }
+    @else if type-of($value) == 'number' and $value >= $width {
+      $breakpoint-name: 'custom';
+      $breakpoint-value: $value + px;
+    }
+  }
+
+  @if $breakpoint-name != null {
+    @media (min-width: #{$breakpoint-value}) {
+      @content;
+    }
+  } @else {
+    @warn "Invalid breakpoint: #{$value}. Please use a predefined breakpoint or a numeric value.";
+  }
+}
+
+@mixin media-breakpoint-down($value) {
+  $breakpoint-name: null;
+  $breakpoint-value: null;
+
+  @each $breakpoint, $width in $breakpoints {
+    @if $value == $breakpoint {
+      $breakpoint-name: $breakpoint;
+      $breakpoint-value: $width;
+    }
+    @else if type-of($value) == 'number' and $value > $width {
+      $breakpoint-name: 'custom';
+      $breakpoint-value: $width - 0.02px; // Slightly reduce to ensure exclusivity
+    }
+  }
+
+  @if $breakpoint-name != null {
+    @media (max-width: #{$breakpoint-value}) {
+      @content;
+    }
+  } @else {
+    @warn "Invalid breakpoint: #{$value}. Please use a predefined breakpoint or a numeric value.";
+  }
+}
+
+@mixin media-breakpoint-between($value1, $value2) {
+  $min-name: null;
+  $min-value: null;
+  $max-name: null;
+  $max-value: null;
+
+  @each $breakpoint, $width in $breakpoints {
+    // Check if $value1 is a predefined breakpoint
+    @if $value1 == $breakpoint {
+      $min-name: $breakpoint;
+      $min-value: $width;
+    }
+
+    // Check if $value2 is a predefined breakpoint
+    @if $value2 == $breakpoint {
+      $max-name: $breakpoint;
+      $max-value: $width;
+    }
+
+    // Check if $value1 and $value2 are numeric
+    @if type-of($value1) == 'number' {
+      $min-name: 'custom';
+      $min-value: $value1 + px;
+    }
+
+    @if type-of($value2) == 'number' {
+      $max-name: 'custom';
+      $max-value: $value2 + px;
+    }
+  }
+
+  @if $min-name != null and $max-name != null {
+    @media (min-width: #{$min-value}) and (max-width: #{$max-value}) {
+      @content;
+    }
+  } @else {
+    @warn "Invalid breakpoint values: #{$value1} or #{$value2}. Please use predefined breakpoints or numeric values.";
+  }
+}

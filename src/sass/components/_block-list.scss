@@ -1,0 +1,84 @@
+.block-list {
+  &__item {
+    margin-bottom: 2rem;
+  }
+
+  &__item-header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    @include media-breakpoint-up(sm) {
+      align-items: flex-start;
+    }
+    
+
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+  }
+
+  &__item-title {
+    margin: 0;
+  }
+
+  &__item-year-wrapper {
+    display: flex;
+  }
+
+  &__item-year {
+    font-size: 1.5em;
+    text-transform: uppercase;
+      &:after {
+        content: ".";
+      }
+
+      &--end {
+        &:before {
+          content: "-";
+          margin: 0 5px;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        font-size: 1.2em;
+      }
+    
+  }
+
+  &__item-text {
+    p {
+      color: $grey;
+      margin: 0.2rem 0;
+    }
+  }
+
+  &__item-link {
+    text-decoration: underline;
+    font-weight: 400;
+    margin-left: 0.3rem;
+
+    &:before {
+      content: "(";
+    }
+
+    &:after {
+      content: ")";
+    }
+  }
+}
+
+.dark {
+  .block-list {
+    &__item-link, &__item-year {
+      color: $grey;
+    }
+    &__item-text {
+      p {
+        color: $light-grey;
+      }
+    }
+  }
+}

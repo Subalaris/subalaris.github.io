@@ -1,0 +1,18 @@
+* {
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  color: $primary;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.125rem;
+}
+
+.dark {
+  background: $black;
+  color: $light-grey;
+}

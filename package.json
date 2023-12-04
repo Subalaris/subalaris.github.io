@@ -1,0 +1,30 @@
+{
+  "name": "subalaris.github.io",
+  "version": "1.0.0",
+  "description": "Business Profile Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Subalaris/subalaris.github.io.git"
+  },
+  "author": "Marko Moguljak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Subalaris/subalaris.github.io/issues"
+  },
+  "homepage": "https://github.com/Subalaris/subalaris.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0"
+  },
+  "dependencies": {
+    "html2pdf.js": "^0.10.1",
+    "sass": "^1.69.4"
+  }
+}
