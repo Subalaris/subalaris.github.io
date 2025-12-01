@@ -310,6 +310,7 @@ h4 {
   width: 100%;
   height: auto;
   background-color: #ffffff;
+  transform: scale(1.1);
 }
 .user__info-name {
   margin: 0;
