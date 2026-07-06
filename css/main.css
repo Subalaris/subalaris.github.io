@@ -310,7 +310,6 @@ h4 {
   width: 100%;
   height: auto;
   background-color: #ffffff;
-  transform: scale(1.1);
 }
 .user__info-name {
   margin: 0;
@@ -526,12 +525,9 @@ h4 {
   font-size: 1.5em;
   text-transform: uppercase;
 }
-.block-list__item-year:after {
-  content: ".";
-}
 .block-list__item-year--end:before {
   content: "-";
-  margin: 0 5px;
+  margin: 0 0 0 5px;
 }
 @media (max-width: 768px) {
   .block-list__item-year {
