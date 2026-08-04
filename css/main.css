@@ -550,6 +550,13 @@ h4 {
 .block-list__item-link:after {
   content: ")";
 }
+.block-list__tech {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.block-list__tech--title, .block-list__tech--item {
+  color: #808285;
+}
 
 .dark .block-list__item-link, .dark .block-list__item-year {
   color: #808285;

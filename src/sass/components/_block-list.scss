@@ -65,6 +65,16 @@
       content: ")";
     }
   }
+
+  &__tech { 
+    font-size: 1rem;
+    font-weight: bold;
+
+    &--title, &--item {
+      color: $grey;
+    }
+    
+  }
 }
 
 .dark {
