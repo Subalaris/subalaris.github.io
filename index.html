@@ -98,14 +98,85 @@
         <div class="block__content col-11 offset-1">
           <div class="block__text">
             <p>
-              I help companies modernize and scale production web platforms through performance engineering, platform
-              architecture, and thoughtful software development.
+              I’m a software engineer who builds web products and improves the platforms behind them. My work spans
+              frontend development, backend systems, and cloud infrastructure—from turning an idea into a working
+              application to making an established platform faster, more reliable, and easier to maintain.
             </p>
           </div>
         </div>
       </div>
     </div>
     <!--/block-->
+
+    <section class="block block--icon block--projects" id="selected-projects" aria-labelledby="projects-heading">
+      <div class="block__title row">
+        <div class="col-1">
+          <div class="block__title-icon-wrapper">
+            <img class="block__title-icon" src="images/icons/coding-icon.svg" alt="" />
+          </div>
+        </div>
+        <div class="col-11">
+          <h2 class="block-heading" id="projects-heading">Selected Projects</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="block__content col-11 offset-1">
+          <article class="project" aria-labelledby="offlog-heading">
+            <div class="project__header">
+              <div>
+                <h3 class="project__title" id="offlog-heading">OffLog</h3>
+                <h4 class="project__subtitle">Private travel planning application</h4>
+              </div>
+              <a class="project__visit" href="https://offlog.sevenseven.tech/" target="_blank"
+                rel="noopener noreferrer">
+                Visit OffLog <span aria-hidden="true">&#8599;</span><span class="project__sr-only"> (opens in a new
+                  tab)</span>
+              </a>
+            </div>
+
+            <p class="project__description">
+              Designed and built a full-stack application that brings scattered travel details into one place. OffLog
+              organizes flights, stays, activities, documents, and budgets into a clear itinerary, with calendar
+              subscriptions, PDF exports, and an interactive map of past travels.
+            </p>
+
+            <div class="project__gallery">
+              <figure class="project__figure">
+                <a class="project__image-link" href="images/projects/offlog-desktop.jpg" target="_blank"
+                  rel="noopener noreferrer" aria-label="Enlarge OffLog desktop screenshot (opens in a new tab)">
+                  <img class="project__image" src="images/projects/offlog-desktop.jpg" width="1440" height="1000"
+                    loading="lazy" decoding="async"
+                    alt="OffLog desktop homepage with travel planning tools and an example Lisbon itinerary." />
+                </a>
+                <figcaption class="project__caption">Desktop homepage &amp; example itinerary</figcaption>
+              </figure>
+              <figure class="project__figure">
+                <a class="project__image-link" href="images/projects/offlog-mobile.jpg" target="_blank"
+                  rel="noopener noreferrer" aria-label="Enlarge OffLog mobile screenshot (opens in a new tab)">
+                  <img class="project__image" src="images/projects/offlog-mobile.jpg" width="390" height="1388"
+                    loading="lazy" decoding="async"
+                    alt="OffLog mobile homepage with a stacked layout and example Lisbon travel plans." />
+                </a>
+                <figcaption class="project__caption">Mobile homepage</figcaption>
+              </figure>
+            </div>
+
+            <ul class="project__highlights">
+              <li>Built chronological itineraries that account for flight connections, overnight arrivals, and
+                accommodation check-in and checkout.</li>
+              <li>Implemented booking imports from confirmation text and PDFs, plus travel-history imports from Google
+                Timeline and Google Photos.</li>
+              <li>Added passwordless authentication, database access policies, and private document storage through
+                Supabase.</li>
+            </ul>
+
+            <p class="project__tech"><strong>Tech:</strong> Next.js &middot; React &middot; TypeScript &middot; Supabase
+              &middot; PostgreSQL &middot; Tailwind CSS</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <div class="block block--icon block--employment">
       <div class="block__title row">

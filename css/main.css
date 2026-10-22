@@ -693,3 +693,121 @@ h4 {
 .dark .timeline__item-description {
   color: #ffffff;
 }
+
+.project {
+  text-align: left;
+  line-height: 1.6;
+}
+.project__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.project__title {
+  margin: 0;
+}
+.project__subtitle {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.project__visit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #424142;
+  border-radius: 4px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.project__visit:hover {
+  background: #e6edf3;
+}
+.project__visit:focus-visible, .project__image-link:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+.project__description {
+  margin: 1rem 0 1.5rem;
+}
+.project__gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.195fr);
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+.project__figure {
+  min-width: 0;
+  margin: 0;
+}
+.project__image-link {
+  display: block;
+  border-radius: 6px;
+}
+.project__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #808285;
+  border-radius: 6px;
+}
+.project__caption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+.project__highlights {
+  padding-left: 1.25rem;
+  margin: 0 0 1rem;
+}
+.project__highlights li + li {
+  margin-top: 0.5rem;
+}
+.project__tech {
+  margin: 0;
+  font-size: 1rem;
+}
+.project__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 576px) {
+  .project__gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .project__figure + .project__figure {
+    width: 55%;
+    max-width: 220px;
+    justify-self: center;
+  }
+}
+
+.dark .project p, .dark .project li, .dark .project strong, .dark .project figcaption, .dark .project a, .dark .project a span {
+  color: #e6edf3;
+}
+.dark .project .project__visit {
+  border-color: #e6edf3;
+}
+.dark .project .project__visit:hover {
+  background: #424142;
+}
+
+@media print {
+  .project__gallery,
+  .project__header {
+    break-inside: avoid;
+  }
+}

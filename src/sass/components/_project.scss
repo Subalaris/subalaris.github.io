@@ -1,0 +1,140 @@
+.project {
+  text-align: left;
+  line-height: 1.6;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+
+  &__visit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+    border: 1px solid $primary;
+    border-radius: 4px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    &:hover {
+      background: $light-grey;
+    }
+  }
+
+  &__visit:focus-visible,
+  &__image-link:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 4px;
+  }
+
+  &__description {
+    margin: 1rem 0 1.5rem;
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.195fr);
+    gap: 1rem;
+    align-items: start;
+    margin-bottom: 1.5rem;
+  }
+
+  &__figure {
+    min-width: 0;
+    margin: 0;
+  }
+
+  &__image-link {
+    display: block;
+    border-radius: 6px;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid $grey;
+    border-radius: 6px;
+  }
+
+  &__caption {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  &__highlights {
+    padding-left: 1.25rem;
+    margin: 0 0 1rem;
+
+    li + li {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__tech {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  &__sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__gallery {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    &__figure + &__figure {
+      width: 55%;
+      max-width: 220px;
+      justify-self: center;
+    }
+  }
+}
+
+.dark .project {
+  p, li, strong, figcaption, a, a span {
+    color: $light-grey;
+  }
+
+  .project__visit {
+    border-color: $light-grey;
+
+    &:hover {
+      background: $primary;
+    }
+  }
+}
+
+@media print {
+  .project__gallery,
+  .project__header {
+    break-inside: avoid;
+  }
+}
