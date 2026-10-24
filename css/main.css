@@ -698,6 +698,11 @@ h4 {
   text-align: left;
   line-height: 1.6;
 }
+.project + .project {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #808285;
+}
 .project__header {
   display: flex;
   align-items: center;

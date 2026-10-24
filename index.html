@@ -141,27 +141,6 @@
               subscriptions, PDF exports, and an interactive map of past travels.
             </p>
 
-            <div class="project__gallery">
-              <figure class="project__figure">
-                <a class="project__image-link" href="images/projects/offlog-desktop.jpg" target="_blank"
-                  rel="noopener noreferrer" aria-label="Enlarge OffLog desktop screenshot (opens in a new tab)">
-                  <img class="project__image" src="images/projects/offlog-desktop.jpg" width="1440" height="1000"
-                    loading="lazy" decoding="async"
-                    alt="OffLog desktop homepage with travel planning tools and an example Lisbon itinerary." />
-                </a>
-                <figcaption class="project__caption">Desktop homepage &amp; example itinerary</figcaption>
-              </figure>
-              <figure class="project__figure">
-                <a class="project__image-link" href="images/projects/offlog-mobile.jpg" target="_blank"
-                  rel="noopener noreferrer" aria-label="Enlarge OffLog mobile screenshot (opens in a new tab)">
-                  <img class="project__image" src="images/projects/offlog-mobile.jpg" width="390" height="1388"
-                    loading="lazy" decoding="async"
-                    alt="OffLog mobile homepage with a stacked layout and example Lisbon travel plans." />
-                </a>
-                <figcaption class="project__caption">Mobile homepage</figcaption>
-              </figure>
-            </div>
-
             <ul class="project__highlights">
               <li>Built chronological itineraries that account for flight connections, overnight arrivals, and
                 accommodation check-in and checkout.</li>
@@ -173,6 +152,35 @@
 
             <p class="project__tech"><strong>Tech:</strong> Next.js &middot; React &middot; TypeScript &middot; Supabase
               &middot; PostgreSQL &middot; Tailwind CSS</p>
+          </article>
+
+          <article class="project" aria-labelledby="site-staples-heading">
+            <div class="project__header">
+              <div>
+                <h3 class="project__title" id="site-staples-heading">Site Staples</h3>
+                <h4 class="project__subtitle">Modular WordPress utilities plugin</h4>
+              </div>
+            </div>
+
+            <p class="project__description">
+              Designed and built a lightweight WordPress plugin that brings everyday site-management tools into one
+              native settings interface. Eleven independent modules cover content, media, site behavior, and the admin
+              workspace, with every feature disabled by default and loaded only when enabled.
+            </p>
+
+            <ul class="project__highlights">
+              <li>Added comment controls, draft duplication, revision limits, and content list columns, alongside
+                sanitized SVG uploads, media replacement, and image-size controls.</li>
+              <li>Built a local redirect manager supporting up to 10,000 rules, maintenance mode with custom page
+                content, and role-based dashboard and toolbar cleanup.</li>
+              <li>Implemented validated settings import/export, permission checks, and explicit previews and
+                confirmations for revision cleanup, with no telemetry or external services.</li>
+            </ul>
+
+            <p class="project__description"><strong>Status:</strong> Submitted to WordPress.org; awaiting review.</p>
+
+            <p class="project__tech"><strong>Tech:</strong> WordPress &middot; PHP &middot; JavaScript &middot; CSS
+              &middot; WordPress Settings API</p>
           </article>
         </div>
       </div>
@@ -623,6 +631,10 @@
                       AWS Serverless Web Architecture: Explored a modern serverless architecture using S3, CloudFront,
                       Route 53, Lambda, SES, and Terraform to build a secure, globally distributed hosting platform with
                       infrastructure defined as code.
+                    </li>
+                    <li class="bullet-list__item">
+                      Built Site Staples, a modular WordPress plugin with eleven opt-in site-management tools;
+                      submitted to WordPress.org for review.
                     </li>
                     <li class="bullet-list__item">
                       Open-Source Cloud-Native CMS — In Development: Building an open-source CMS based on the serverless

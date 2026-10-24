@@ -2,6 +2,12 @@
   text-align: left;
   line-height: 1.6;
 
+  & + & {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid $grey;
+  }
+
   &__header {
     display: flex;
     align-items: center;
